@@ -9,11 +9,10 @@ import java.util.*;
 public class Scenario {
 	
 	private List<Character> passengers=new ArrayList<Character>();
-	
-
 	private List<Character> pedestrians=new ArrayList<Character>();
 	private boolean legalCrossing;
-	
+	private int passengersLength;
+	private int pedestriansLength;
 	public Scenario()
 	{
 		
@@ -24,6 +23,7 @@ public class Scenario {
 
 	public void setPassengers(List<Character> passengers) {
 		this.passengers = passengers;
+		this.setPassengersLength(passengers.size());
 	}
 
 	public List<Character> getPedestrians() {
@@ -32,6 +32,7 @@ public class Scenario {
 
 	public void setPedestrians(List<Character> pedestrians) {
 		this.pedestrians = pedestrians;
+		this.setPedestriansLength(pedestrians.size());
 	}
 
 	public boolean isLegalCrossing() {
@@ -40,6 +41,18 @@ public class Scenario {
 
 	public void setLegalCrossing(boolean legalCrossing) {
 		this.legalCrossing = legalCrossing;
+	}
+	public int getPassengersLength() {
+		return passengersLength;
+	}
+	public void setPassengersLength(int passengersLength) {
+		this.passengersLength = passengersLength;
+	}
+	public int getPedestriansLength() {
+		return pedestriansLength;
+	}
+	public void setPedestriansLength(int pedestriansLength) {
+		this.pedestriansLength = pedestriansLength;
 	}
 
 }
